@@ -324,7 +324,7 @@ public class IobCobOref1Thread extends Thread {
                         double currentBasal = profile.getBasal(bgTime);
                         // always exclude the first 45m after each carb entry
                         //if (iob.iob > currentBasal || uam ) {
-                        if (iob.iob > 2 * currentBasal || autosensData.uam || autosensData.mealStartCounter < 9) {
+                        if (iob.iob > 1.2 * currentBasal || autosensData.uam || autosensData.mealStartCounter < 9) {
                             autosensData.mealStartCounter++;
                             autosensData.uam = deviation > 0;
                             if (!autosensData.type.equals("uam")) {
